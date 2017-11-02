@@ -31,14 +31,12 @@ const Card = ({ currentView, member, house, getHouseMembers }) => {
         })}</h2>
       </div>
     );
-  } else {
+  } else if (!member){
     return (
       <div>
-        <h1>Loading</h1>
       </div>
     );
   }
-
 };
 
 Card.propTypes = {
