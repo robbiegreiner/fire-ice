@@ -13,26 +13,40 @@ class App extends Component {
     this.props.getHouseData();
   }
 
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   return nextState.houseData !== this.state.houseData
+  // }
+
+
+
   render() {
-    return (
-      <div className='App'>
-        <div className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
-          <h2>Welcome to Westeros</h2>
-          <button onClick={() => {
-            this.props.fakeAction();
-            alert(this.props.fake);
-          }}> FAKE ACTION</button>
+    // if (this.props.houseData.name){
+      return (
+        <div className='App'>
+          <div className='App-header'>
+            <img src={logo} className='App-logo' alt='logo' />
+            <h2>Welcome to Westeros</h2>
+          </div>
+          <div className='Display-info'>
+            <CardContainer houseData={this.props.houseData}/>
+          </div>
         </div>
-        <div className='Display-info'>
-          <CardContainer />
-        </div>
-      </div>
-    );
+      );
+    // } else {
+    //   return (
+    //     <div>
+    //       <h1>loading</h1>
+    //     </div>
+    //   );
+    // }
+
   }
 }
 
-const mapStateToProps = ({ fake }) => ({ fake });
+const mapStateToProps = store => ({
+  houseData: store.houseData
+});
+
 const mapDispatchToProps = dispatch => ({
   fakeAction: () => dispatch(fakeAction()),
 

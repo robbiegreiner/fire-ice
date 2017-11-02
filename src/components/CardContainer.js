@@ -8,12 +8,37 @@ class CardContainer extends Component {
     super();
   }
 
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   return nextProps.houseData !== this.props.houseData
+  // }
+
+  // componentWillReceiveProps(nextProps) {
+  //   if (this.props !== nextProps) {
+  //     console.log(nextProps);
+  //   }
+  // }
+
+  renderCards = () => this.props.houseData.map( house =>{
+    return <Card
+      key={house.name}
+      house={house}/>;
+  })
+
   render() {
-    return (
-      <div>
-        <h1>hi</h1>
-      </div>
-    );
+    if (this.props.houseData) {
+      return (
+        <div>
+          {this.renderCards()}
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <h1>loading</h1>
+        </div>
+      );
+    }
+
   }
 }
 
