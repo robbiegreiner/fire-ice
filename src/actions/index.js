@@ -11,8 +11,7 @@ export const fetchHouses = () => {
   return dispatch => {
     fetch(`http://localhost:3001/api/v1/houses`)
       .then(response => response.json())
-      .then(results => console.log(results))
-      // .then(results => dispatch(fetchHousesSuccess(results)))
+      .then(results => dispatch(fetchHousesSuccess(results)))
       .catch(error => console.log(error));
   };
 };
