@@ -46,14 +46,6 @@ class CardContainer extends Component {
         <div>Loading</div>
       );
     }
-    // else if (this.props.members && this.props.currentView === 'members') {
-    //   return (
-    //     <div>
-    //       {this.renderMembers()}
-    //     </div>
-    //   );
-    // }
-
   }
 }
 
@@ -75,7 +67,7 @@ const mapDispatchToProps = dispatch => ({
 export default connect(mapStateToProps, mapDispatchToProps)(CardContainer);
 
 CardContainer.propTypes = {
-  houseData: PropTypes.object,
+  houseData: PropTypes.array,
   getHouseMembers: PropTypes.func,
   members: PropTypes.array,
   currentView: PropTypes.string,
