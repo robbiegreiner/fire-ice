@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 import PropTypes, { shape, func, string } from 'prop-types';
 import logo from './logo.svg';
 import './App.css';
-
 import { fakeAction } from '../../actions';
+
 class App extends Component {
+
+  componentDidMount() {
+    // this.props.getHouseData();
+  }
 
   render() {
     return (
@@ -26,7 +30,8 @@ class App extends Component {
 
 App.propTypes = {
   fake: shape({ fake: string }),
-  fakeAction: func.isRequired
+  fakeAction: func.isRequired,
+  getHouseData: PropTypes.func
 };
 
 export default App;
