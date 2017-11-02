@@ -31,12 +31,13 @@ class CardContainer extends Component {
       return (
         <div className="card-container">
           {this.renderCards()}
+          {this.renderMembers()}
         </div>
       );
-    } else if (this.props.currentView === 'members') {
+    } else if (this.props.members && this.props.currentView === 'members') {
       return (
         <div>
-          <h1>loading</h1>
+          {this.renderMembers()}
         </div>
       );
     }

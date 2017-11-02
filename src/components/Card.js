@@ -3,11 +3,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import './App/App.css';
 
-//on click of Card
-// fetch data
-// set in store
-// if store.members render members instead of cards
-
 const Card = ({ currentView, member, house, getHouseMembers }) => {
   if (currentView === 'houses'){
     return (
@@ -27,12 +22,21 @@ const Card = ({ currentView, member, house, getHouseMembers }) => {
         <h1>{house.words}</h1>
       </div>
     );
-  } else if (currentView === 'members') {
+  } else if (currentView === 'members' && member) {
     return (
       <div className='card'>
-        <h1>hi</h1>
+        <h1>{member.name}</h1>
+        <h2>Titles: {member.titles.map( title => {
+          return title;
+        })}</h2>
       </div>
-    )
+    );
+  } else {
+    return (
+      <div>
+        <h1>Loading</h1>
+      </div>
+    );
   }
 
 };
