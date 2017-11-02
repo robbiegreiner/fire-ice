@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Card from './Card.js';
+import './App/App.css';
 
 class CardContainer extends Component {
   constructor() {
@@ -27,7 +28,7 @@ class CardContainer extends Component {
   render() {
     if (this.props.houseData) {
       return (
-        <div>
+        <div className="card-container">
           {this.renderCards()}
         </div>
       );

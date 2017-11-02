@@ -21,17 +21,17 @@ class App extends Component {
 
   render() {
     // if (this.props.houseData.name){
-      return (
-        <div className='App'>
-          <div className='App-header'>
-            <img src={logo} className='App-logo' alt='logo' />
-            <h2>Welcome to Westeros</h2>
-          </div>
-          <div className='Display-info'>
-            <CardContainer houseData={this.props.houseData}/>
-          </div>
+    return (
+      <div className='App'>
+        <div className='App-header'>
+          <img src={logo} className='App-logo' alt='logo' />
+          <h2>Welcome to Westeros</h2>
         </div>
-      );
+        <div className='Display-info'>
+          <CardContainer houseData={this.props.houseData}/>
+        </div>
+      </div>
+    );
     // } else {
     //   return (
     //     <div>
