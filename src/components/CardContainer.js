@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Card from './Card.js';
+import { connect } from 'react-redux';
 import './App/App.css';
+import { fetchMembers } from '../actions/index';
 
 class CardContainer extends Component {
   constructor() {
@@ -21,6 +23,7 @@ class CardContainer extends Component {
 
   renderCards = () => this.props.houseData.map( house =>{
     return <Card
+      getHouseMembers={this.props.getHouseMembers}
       key={house.name}
       house={house}/>;
   })
@@ -43,8 +46,19 @@ class CardContainer extends Component {
   }
 }
 
-CardContainer.propTypes = {
-  houseData: PropTypes.object
-};
+const mapStateToProps = store => ({
+  houseData: store.houseData
+});
 
-export default CardContainer;
+const mapDispatchToProps = dispatch => ({
+  getHouseMembers: (membersURLs) => {
+    dispatch(fetchMembers(membersURLs));
+  }
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(CardContainer);
+
+CardContainer.propTypes = {
+  houseData: PropTypes.object,
+  getHouseMembers: PropTypes.func
+};

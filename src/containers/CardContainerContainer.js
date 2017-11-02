@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import CardContainer from '../components/CardContainer';
-import {  } from '../actions/actions';
+import { fetchMembers } from '../actions/actions';
 
 
 
@@ -9,9 +9,9 @@ const mapStateToProps = store => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  // getBrewery: (id) => {
-  //   dispatch(fetchBrewery(id));
-  // }
+  getHouseMembers: (membersURLs) => {
+    dispatch(fetchMembers(membersURLs));
+  }
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CardContainer);
