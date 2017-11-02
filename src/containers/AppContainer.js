@@ -1,15 +1,9 @@
 import { connect } from 'react-redux';
-import App from '../components/App.js';
-import { fakeAction, fetchHouses } from '../actions/actions';
+import App from '../components/App';
+import { fakeAction } from '../actions/index';
 
 const mapStateToProps = ({ fake }) => ({ fake });
-const mapDispatchToProps = dispatch => ({
-  fakeAction: () => dispatch(fakeAction()),
-
-  getHouseData: () => {
-    dispatch(fetchHouses());
-  }
-
+const mapDispatchToProps = dispatch => ({ fakeAction:
+  () => dispatch(fakeAction())
 });
-
 export default connect(mapStateToProps, mapDispatchToProps)(App);

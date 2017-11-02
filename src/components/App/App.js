@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import PropTypes, { shape, func, string } from 'prop-types';
 import logo from './logo.svg';
 import './App.css';
-import { fakeAction } from '../../actions';
+import { connect } from 'react-redux';
+import { fakeAction, fetchHouses } from '../../actions/index';
+
 
 class App extends Component {
 
   componentDidMount() {
-    // this.props.getHouseData();
+    this.props.getHouseData();
   }
 
   render() {
@@ -28,10 +30,20 @@ class App extends Component {
   }
 }
 
+const mapStateToProps = ({ fake }) => ({ fake });
+const mapDispatchToProps = dispatch => ({
+  fakeAction: () => dispatch(fakeAction()),
+
+  getHouseData: () => {
+    dispatch(fetchHouses());
+  }
+
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
+
 App.propTypes = {
   fake: shape({ fake: string }),
   fakeAction: func.isRequired,
   getHouseData: PropTypes.func
 };
-
-export default App;
