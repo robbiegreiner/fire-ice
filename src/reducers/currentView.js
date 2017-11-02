@@ -4,6 +4,8 @@ const currentView = (state = 'houses', action) => {
     return 'houses';
   case 'MEMBER_SUCCESS':
     return 'members';
+  case 'RESET_VIEW':
+    return 'houses';
   default:
     return state;
   }

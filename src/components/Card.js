@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import './App/App.css';
 
-const Card = ({ currentView, member, house, getHouseMembers }) => {
-  if (currentView === 'houses'){
+const Card = ({ currentView, member, house, getHouseMembers, resetView }) => {
+  if (currentView === 'houses' && house){
     return (
       <div className='card' onClick={() => getHouseMembers(house.swornMembers)}>
         <h1>{house.name}</h1>
@@ -24,7 +24,7 @@ const Card = ({ currentView, member, house, getHouseMembers }) => {
     );
   } else if (currentView === 'members' && member) {
     return (
-      <div className='card'>
+      <div className='card' onClick={resetView}>
         <h1>{member.name}</h1>
         <h2>Titles: {member.titles.map( title => {
           return title;
@@ -43,7 +43,8 @@ Card.propTypes = {
   house: PropTypes.object,
   getHouseMembers: PropTypes.func,
   currentView: PropTypes.string,
-  member: PropTypes.object
+  member: PropTypes.object,
+  resetView: PropTypes.func
 };
 
 export default Card;
