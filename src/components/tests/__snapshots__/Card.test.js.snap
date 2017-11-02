@@ -1,0 +1,468 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card component should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    house={
+        Object {
+            "ancestralWeapons": Array [
+              "ok",
+              "cool",
+            ],
+            "coatOfArms": "cool dude",
+            "founded": "why not",
+            "name": "sure",
+            "seats": Array [
+              "ok",
+              "cool",
+            ],
+            "titles": Array [
+              "ok",
+              "cool",
+            ],
+            "words": Array [
+              "whatever",
+            ],
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "class",
+    "props": Object {
+      "children": <div
+        className="card"
+>
+        <h1>
+                sure
+        </h1>
+        <h2>
+                Founded: 
+                why not
+        </h2>
+        <h3>
+                Seats: 
+                ok
+                cool
+        </h3>
+        <h3>
+                Titles: 
+                ok
+                cool
+        </h3>
+        <h4>
+                Coat of Arms: 
+                cool dude
+        </h4>
+        <h4>
+                Ancestral Weapons: 
+                ok
+                cool
+        </h4>
+        <h1>
+                whatever
+        </h1>
+</div>,
+      "replace": false,
+      "to": "/",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1>
+            sure
+</h1>,
+          <h2>
+            Founded: 
+            why not
+</h2>,
+          <h3>
+            Seats: 
+            ok
+            cool
+</h3>,
+          <h3>
+            Titles: 
+            ok
+            cool
+</h3>,
+          <h4>
+            Coat of Arms: 
+            cool dude
+</h4>,
+          <h4>
+            Ancestral Weapons: 
+            ok
+            cool
+</h4>,
+          <h1>
+            whatever
+</h1>,
+        ],
+        "className": "card",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "sure",
+          },
+          "ref": null,
+          "rendered": "sure",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Founded: ",
+              "why not",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Founded: ",
+            "why not",
+          ],
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Seats: ",
+              Array [
+                "ok",
+                "cool",
+              ],
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Seats: ",
+            "ok",
+            "cool",
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Titles: ",
+              Array [
+                "ok",
+                "cool",
+              ],
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Titles: ",
+            "ok",
+            "cool",
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Coat of Arms: ",
+              "cool dude",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Coat of Arms: ",
+            "cool dude",
+          ],
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Ancestral Weapons: ",
+              Array [
+                "ok",
+                "cool",
+              ],
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Ancestral Weapons: ",
+            "ok",
+            "cool",
+          ],
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "whatever",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "whatever",
+          ],
+          "type": "h1",
+        },
+      ],
+      "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "class",
+      "props": Object {
+        "children": <div
+          className="card"
+>
+          <h1>
+                    sure
+          </h1>
+          <h2>
+                    Founded: 
+                    why not
+          </h2>
+          <h3>
+                    Seats: 
+                    ok
+                    cool
+          </h3>
+          <h3>
+                    Titles: 
+                    ok
+                    cool
+          </h3>
+          <h4>
+                    Coat of Arms: 
+                    cool dude
+          </h4>
+          <h4>
+                    Ancestral Weapons: 
+                    ok
+                    cool
+          </h4>
+          <h1>
+                    whatever
+          </h1>
+</div>,
+        "replace": false,
+        "to": "/",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h1>
+              sure
+</h1>,
+            <h2>
+              Founded: 
+              why not
+</h2>,
+            <h3>
+              Seats: 
+              ok
+              cool
+</h3>,
+            <h3>
+              Titles: 
+              ok
+              cool
+</h3>,
+            <h4>
+              Coat of Arms: 
+              cool dude
+</h4>,
+            <h4>
+              Ancestral Weapons: 
+              ok
+              cool
+</h4>,
+            <h1>
+              whatever
+</h1>,
+          ],
+          "className": "card",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "sure",
+            },
+            "ref": null,
+            "rendered": "sure",
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Founded: ",
+                "why not",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Founded: ",
+              "why not",
+            ],
+            "type": "h2",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Seats: ",
+                Array [
+                  "ok",
+                  "cool",
+                ],
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Seats: ",
+              "ok",
+              "cool",
+            ],
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Titles: ",
+                Array [
+                  "ok",
+                  "cool",
+                ],
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Titles: ",
+              "ok",
+              "cool",
+            ],
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Coat of Arms: ",
+                "cool dude",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Coat of Arms: ",
+              "cool dude",
+            ],
+            "type": "h4",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Ancestral Weapons: ",
+                Array [
+                  "ok",
+                  "cool",
+                ],
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "Ancestral Weapons: ",
+              "ok",
+              "cool",
+            ],
+            "type": "h4",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "whatever",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "whatever",
+            ],
+            "type": "h1",
+          },
+        ],
+        "type": "div",
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
