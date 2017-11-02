@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import Card from './Card.js';
 import { connect } from 'react-redux';
 import './App/App.css';
-import { fetchMembers } from '../actions/index';
+import { fetchMembers, resetViewToHouses } from '../actions/index';
 
 class CardContainer extends Component {
   constructor() {
@@ -23,24 +22,37 @@ class CardContainer extends Component {
     return <Card
       currentView={this.props.currentView}
       key={member.name}
+      resetView={this.props.resetView}
       member={member}/>;
   })
 
   render() {
-    if (this.props.currentView === 'houses', this.props.houseData) {
+    if (this.props.houseData && this.props.currentView ==='houses') {
       return (
         <div className="card-container">
           {this.renderCards()}
-          {this.renderMembers()}
-        </div>
-      );
-    } else if (this.props.members && this.props.currentView === 'members') {
-      return (
-        <div>
-          {this.renderMembers()}
         </div>
       );
     }
+
+    if (this.props.members && this.props.currentView ==='members'){
+      return (
+        <div className="card-container">
+          {this.renderMembers()}
+        </div>
+      );
+    } else {
+      return (
+        <div>Loading</div>
+      );
+    }
+    // else if (this.props.members && this.props.currentView === 'members') {
+    //   return (
+    //     <div>
+    //       {this.renderMembers()}
+    //     </div>
+    //   );
+    // }
 
   }
 }
@@ -54,6 +66,9 @@ const mapStateToProps = store => ({
 const mapDispatchToProps = dispatch => ({
   getHouseMembers: (membersURLs) => {
     dispatch(fetchMembers(membersURLs));
+  },
+  resetView: () => {
+    dispatch(resetViewToHouses());
   }
 });
 
@@ -63,5 +78,6 @@ CardContainer.propTypes = {
   houseData: PropTypes.object,
   getHouseMembers: PropTypes.func,
   members: PropTypes.array,
-  currentView: PropTypes.string
+  currentView: PropTypes.string,
+  resetView: PropTypes.func
 };

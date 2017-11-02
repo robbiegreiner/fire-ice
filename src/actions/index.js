@@ -7,6 +7,12 @@ export const fetchHousesSuccess = houses => {
   };
 };
 
+export const resetViewToHouses = () => {
+  return {
+    type: 'RESET_VIEW'
+  };
+};
+
 export const fetchHouses = () => {
   return dispatch => {
     fetch(`http://localhost:3001/api/v1/houses`)
@@ -28,7 +34,7 @@ export const fetchMembers = (swornMembers) => {
 
     const unresolvedPromises = swornMembers.map( memberURL =>{
       const theBody = JSON.stringify({ url: memberURL});
-      
+
       return fetch('http://localhost:3001/api/v1/character', {
         method: 'POST',
         headers: {"Content-Type" : "application/json"},
