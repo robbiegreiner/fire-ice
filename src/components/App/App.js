@@ -13,14 +13,7 @@ class App extends Component {
     this.props.getHouseData();
   }
 
-  // shouldComponentUpdate(nextProps, nextState) {
-  //   return nextState.houseData !== this.state.houseData
-  // }
-
-
-
   render() {
-    // if (this.props.houseData.name){
     return (
       <div className='App'>
         <div className='App-header'>
@@ -32,14 +25,6 @@ class App extends Component {
         </div>
       </div>
     );
-    // } else {
-    //   return (
-    //     <div>
-    //       <h1>loading</h1>
-    //     </div>
-    //   );
-    // }
-
   }
 }
 
@@ -61,5 +46,6 @@ export default connect(mapStateToProps, mapDispatchToProps)(App);
 App.propTypes = {
   fake: shape({ fake: string }),
   fakeAction: func.isRequired,
-  getHouseData: PropTypes.func
+  getHouseData: PropTypes.func,
+  houseData: PropTypes.array
 };
