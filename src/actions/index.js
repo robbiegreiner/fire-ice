@@ -27,13 +27,14 @@ export const fetchMembers = (swornMembers) => {
   return dispatch => {
 
     const unresolvedPromises = swornMembers.map( memberURL =>{
-      const theBody = JSON.stringify({ url: memberURL})
+      const theBody = JSON.stringify({ url: memberURL});
+      
       return fetch('http://localhost:3001/api/v1/character', {
         method: 'POST',
         headers: {"Content-Type" : "application/json"},
         body: theBody
       })
-        .then(response => response.json())
+        .then(response => response.json());
     });
 
     const promiseAll = Promise.all(unresolvedPromises);
