@@ -5,7 +5,7 @@ describe('houseData reducer', () => {
     expect(houseData(undefined, [])).toEqual([]);
   });
 
-  it('should give a brewery when passed info', () => {
+  it('should give houseData', () => {
     const mockData = [{
       name: 'sure',
       founded: 'why not',
