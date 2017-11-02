@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes, { shape, func, string } from 'prop-types';
 import logo from './logo.svg';
 import './App.css';
-import { connect } from 'react-redux';
+
 import { fakeAction } from '../../actions';
 class App extends Component {
 
@@ -29,8 +29,4 @@ App.propTypes = {
   fakeAction: func.isRequired
 };
 
-const mapStateToProps = ({ fake }) => ({ fake });
-const mapDispatchToProps = dispatch => ({ fakeAction:
-  () => dispatch(fakeAction())
-});
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;
