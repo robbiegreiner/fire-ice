@@ -6,6 +6,7 @@ describe('CardContainer component', () => {
   const mockFn = jest.fn();
 
   const wrapper = shallow(<CardContainer
+    store
     houseData={[{
       name: 'sure',
       founded: 'why not',

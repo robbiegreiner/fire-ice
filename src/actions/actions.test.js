@@ -19,4 +19,4 @@ describe('actions', () => {
 
     expect(actions.fetchHousesSuccess(mockData)).toEqual(expectedAction);
   });
-})
+});
